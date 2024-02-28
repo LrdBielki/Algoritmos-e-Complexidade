@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+float media(float n1, float n2, float n3);
+
+float area(float b, float a);
+
+typedef struct Aluno{
+    char nome[50];
+    int matricula;
+    float nota;
+} Aluno;
+
+int main()
+{
+    float n1, n2, n3;
+    float base, altura;
+    Aluno aluno;
+    
+    printf("Primeira nota: ");
+    scanf("%f", &n1);
+    printf("Segunda nota: ");
+    scanf("%f", &n2);
+    printf("Terceira nota: ");
+    scanf("%f", &n3);
+    
+    media(n1, n2, n3);
+    printf("A media eh %f.2", media(n1,n2,n3));
+    
+    printf("\n\nDigite a base: ");
+    scanf("%f", &base);
+    printf("Digite a altura: ");
+    scanf("%f", &altura);
+    
+    area(base, altura);
+    printf("A area eh %f", area(base, altura));
+    
+    printf("Escreva o nome do aluno: ");
+    scanf("%s", aluno.nome);
+    printf("Escreva a matricula: ");
+    scanf("%d", &aluno.matricula);
+    printf("Escreva a nota: ");
+    scanf("%f", &aluno.nota);
+    
+    printf("Nome do aluno: %s, matricula: %d, nota: %f", aluno.nome, aluno.matricula, aluno.nota);
+    
+}
+
+float media(float n1, float n2, float n3){
+    float m;
+    m = n1 + n2 + n3/3;
+    return(m);
+}
+
+float area(float b, float h){
+    float dentro;
+    dentro = b * h/2;
+    return(dentro);
+}
